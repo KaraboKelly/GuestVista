@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import './styles/Navbar.scss'
 import homelogo from './pictures/homelogo.png'
+import firebase from "../config/firebase";
 
 const Navbar = () => {
+
     return (
         <div className="nav">
             <img src={homelogo} alt="" style={{ maxHeight: "100px"}}/>
@@ -16,13 +18,13 @@ const Navbar = () => {
                         <Link to='/contacts'>Contacts</Link>
                     </li>
                     <li>
-                        <Link to='/register'>Register</Link>
+                        <Link to='/login'>Login</Link>
                     </li>
                     <li>
                         <Link to='/admin-login'>Admin</Link>
                     </li>
                     <li>
-                        <Link to='/signup'>Sign Up</Link>
+                        <Link to='/signup'>Signup</Link>
                     </li>
                 </ul>
             </nav>
