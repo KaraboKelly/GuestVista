@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+
 import { Link } from "react-router-dom";
 import './styles/Navbar.scss'
 import homelogo from './pictures/homelogo.png'
-import firebase from "../config/firebase";
+
 
 const Navbar = () => {
 

@@ -1,6 +1,8 @@
 import MySideNav from "../MySideNav";
 import { useEffect, useState } from "react";
-import "./addingGuesthouse.scss";
+import { Link } from "react-router-dom";
+import "../Dashboard/addingGuesthouse.scss";
+import { FiPlus } from 'react-icons/fi';
 
 function DashboardOverview() {
   const [guesthouses, setGuesthouses] = useState([]);
@@ -52,7 +54,6 @@ function DashboardOverview() {
           <thead>
             <tr>
               <th>Name</th>
-              <th>Description</th>
               <th>Email</th>
               <th>Ratings</th>
               <th>Price</th>
@@ -64,7 +65,6 @@ function DashboardOverview() {
             {filteredGuesthouses.map((guesthouse) => (
               <tr key={guesthouse.id}>
                 <td>{guesthouse.gName}</td>
-                <td>{guesthouse.description}</td>
                 <td>{guesthouse.email}</td>
                 <td>{guesthouse.ratings}</td>
                 <td>{guesthouse.price}</td>
@@ -92,8 +92,10 @@ function DashboardOverview() {
           </tbody>
         </table>
       </div>
+      <Link to="/guest-houses" className="floating-button">
+      <FiPlus className="floating-button-icon" />
+      </Link>
     </div>
   );
 }
-
 export default DashboardOverview;

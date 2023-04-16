@@ -48,11 +48,12 @@
   }
 
   .dashboard {
-    margin-left: 100px;
-    display: flex;
-    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1500px;
     padding-top: 50px;
+    position: relative;
+    height: 100%;
   }
   
   span {
@@ -120,4 +121,29 @@
   
   tr:hover {
     background-color: #ddd;
+  }
+
+  .floating-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #FFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .floating-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .floating-button-icon {
+    font-size: 24px;
+    color: #333;
   }
