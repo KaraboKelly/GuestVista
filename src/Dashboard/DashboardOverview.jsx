@@ -91,10 +91,12 @@ function DashboardOverview() {
             ))}
           </tbody>
         </table>
-      </div>
-      <Link to="/guest-houses" className="floating-button">
+        <Link to="/guest-houses" className="floating-button">
       <FiPlus className="floating-button-icon" />
       </Link>
+        
+      </div>
+      
     </div>
   );
 }

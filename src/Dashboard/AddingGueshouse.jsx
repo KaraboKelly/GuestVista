@@ -7,12 +7,17 @@ function AddingGuesthouse() {
     description: '',
     price: '',
     location: '',
-    amenities: '',
+    amenities: [],
     contacts: '',
     email: '',
     ratings: '',
     photos: []
   });
+
+  const handleAmenitiesChange = (e) => {
+    const value = e.target.value;
+    setDetails(prevDetails => ({ ...prevDetails, amenities: value.split(',') }));
+  }
 
   const PostData = async (e) => {
     e.preventDefault();
@@ -64,7 +69,7 @@ function AddingGuesthouse() {
       <input type='text' placeholder='Description' onChange={(e) => setDetails({ ...details, description: e.target.value })} />
       <input type='integer' placeholder='Price ' onChange={(e) => setDetails({ ...details, price: e.target.value })} />
       <input type='text' placeholder='Location' onChange={(e) => setDetails({ ...details, location: e.target.value })} />
-      <input type='text' placeholder='Amenities' onChange={(e) => setDetails({ ...details, amenities: e.target.value })} />
+      <input type='text' placeholder='Amenities' onChange={handleAmenitiesChange} />
       <input type='text' placeholder='Contacts' onChange={(e) => setDetails({ ...details, contacts: e.target.value })} />
       <input type='email' placeholder='Email' onChange={(e) => setDetails({ ...details, email: e.target.value })} />
       <input type='ratings' placeholder='Ratings' onChange={(e) => setDetails({ ...details, ratings: e.target.value })} />
